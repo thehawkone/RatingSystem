@@ -1,0 +1,12 @@
+C:\Users\Administrator\RiderProjects\RatingSystem\Rating.Domain\bin\Debug\net8.0\Rating.Domain.deps.json
+C:\Users\Administrator\RiderProjects\RatingSystem\Rating.Domain\bin\Debug\net8.0\Rating.Domain.dll
+C:\Users\Administrator\RiderProjects\RatingSystem\Rating.Domain\bin\Debug\net8.0\Rating.Domain.pdb
+C:\Users\Administrator\RiderProjects\RatingSystem\Rating.Domain\obj\Debug\net8.0\Rating.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Administrator\RiderProjects\RatingSystem\Rating.Domain\obj\Debug\net8.0\Rating.Domain.AssemblyInfoInputs.cache
+C:\Users\Administrator\RiderProjects\RatingSystem\Rating.Domain\obj\Debug\net8.0\Rating.Domain.AssemblyInfo.cs
+C:\Users\Administrator\RiderProjects\RatingSystem\Rating.Domain\obj\Debug\net8.0\Rating.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\RiderProjects\RatingSystem\Rating.Domain\obj\Debug\net8.0\Rating.Domain.sourcelink.json
+C:\Users\Administrator\RiderProjects\RatingSystem\Rating.Domain\obj\Debug\net8.0\Rating.Domain.dll
+C:\Users\Administrator\RiderProjects\RatingSystem\Rating.Domain\obj\Debug\net8.0\refint\Rating.Domain.dll
+C:\Users\Administrator\RiderProjects\RatingSystem\Rating.Domain\obj\Debug\net8.0\Rating.Domain.pdb
+C:\Users\Administrator\RiderProjects\RatingSystem\Rating.Domain\obj\Debug\net8.0\ref\Rating.Domain.dll

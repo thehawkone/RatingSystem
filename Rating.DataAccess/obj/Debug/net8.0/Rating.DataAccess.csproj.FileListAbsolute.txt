@@ -1,0 +1,16 @@
+C:\Users\Administrator\RiderProjects\RatingSystem\Rating.DataAccess\bin\Debug\net8.0\Rating.DataAccess.deps.json
+C:\Users\Administrator\RiderProjects\RatingSystem\Rating.DataAccess\bin\Debug\net8.0\Rating.DataAccess.dll
+C:\Users\Administrator\RiderProjects\RatingSystem\Rating.DataAccess\bin\Debug\net8.0\Rating.DataAccess.pdb
+C:\Users\Administrator\RiderProjects\RatingSystem\Rating.DataAccess\bin\Debug\net8.0\Rating.Domain.dll
+C:\Users\Administrator\RiderProjects\RatingSystem\Rating.DataAccess\bin\Debug\net8.0\Rating.Domain.pdb
+C:\Users\Administrator\RiderProjects\RatingSystem\Rating.DataAccess\obj\Debug\net8.0\Rating.DataAccess.csproj.AssemblyReference.cache
+C:\Users\Administrator\RiderProjects\RatingSystem\Rating.DataAccess\obj\Debug\net8.0\Rating.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Administrator\RiderProjects\RatingSystem\Rating.DataAccess\obj\Debug\net8.0\Rating.DataAccess.AssemblyInfoInputs.cache
+C:\Users\Administrator\RiderProjects\RatingSystem\Rating.DataAccess\obj\Debug\net8.0\Rating.DataAccess.AssemblyInfo.cs
+C:\Users\Administrator\RiderProjects\RatingSystem\Rating.DataAccess\obj\Debug\net8.0\Rating.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\RiderProjects\RatingSystem\Rating.DataAccess\obj\Debug\net8.0\Rating.DataAccess.sourcelink.json
+C:\Users\Administrator\RiderProjects\RatingSystem\Rating.DataAccess\obj\Debug\net8.0\Rating.D.F9CD9390.Up2Date
+C:\Users\Administrator\RiderProjects\RatingSystem\Rating.DataAccess\obj\Debug\net8.0\Rating.DataAccess.dll
+C:\Users\Administrator\RiderProjects\RatingSystem\Rating.DataAccess\obj\Debug\net8.0\refint\Rating.DataAccess.dll
+C:\Users\Administrator\RiderProjects\RatingSystem\Rating.DataAccess\obj\Debug\net8.0\Rating.DataAccess.pdb
+C:\Users\Administrator\RiderProjects\RatingSystem\Rating.DataAccess\obj\Debug\net8.0\ref\Rating.DataAccess.dll

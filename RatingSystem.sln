@@ -10,6 +10,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rating.Domain", "Rating.Dom
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rating.DataAccess", "Rating.DataAccess\Rating.DataAccess.csproj", "{BDE977D4-9443-491B-8776-E9C11CF2B408}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rating.Application", "Rating.Application\Rating.Application.csproj", "{0E1C25F1-AF74-431E-94B0-D2EDA099E539}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rating.API", "Rating.API\Rating.API.csproj", "{002DBE6E-4550-4343-9373-D06EE4661655}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,6 +22,8 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{DB0AF2C9-A0DE-409C-AF08-AA9B3B8B2E8D} = {D77CE70D-3BDA-46A5-AF31-01439C28ECD3}
 		{BDE977D4-9443-491B-8776-E9C11CF2B408} = {E6C79855-5DED-4111-BE40-FD3EC84C103D}
+		{0E1C25F1-AF74-431E-94B0-D2EDA099E539} = {D77CE70D-3BDA-46A5-AF31-01439C28ECD3}
+		{002DBE6E-4550-4343-9373-D06EE4661655} = {82817872-D28E-4118-8DB2-FD79D97603D0}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{DB0AF2C9-A0DE-409C-AF08-AA9B3B8B2E8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -28,5 +34,13 @@ Global
 		{BDE977D4-9443-491B-8776-E9C11CF2B408}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BDE977D4-9443-491B-8776-E9C11CF2B408}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BDE977D4-9443-491B-8776-E9C11CF2B408}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E1C25F1-AF74-431E-94B0-D2EDA099E539}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E1C25F1-AF74-431E-94B0-D2EDA099E539}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E1C25F1-AF74-431E-94B0-D2EDA099E539}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E1C25F1-AF74-431E-94B0-D2EDA099E539}.Release|Any CPU.Build.0 = Release|Any CPU
+		{002DBE6E-4550-4343-9373-D06EE4661655}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{002DBE6E-4550-4343-9373-D06EE4661655}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{002DBE6E-4550-4343-9373-D06EE4661655}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{002DBE6E-4550-4343-9373-D06EE4661655}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
