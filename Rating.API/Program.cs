@@ -10,9 +10,7 @@ using Rating.Domain.Abstractions;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<RatingDbContext>(
-    options => {
-        options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"));
-    });
+    options => options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 //Repository
 builder.Services.AddScoped<IUserRepository, UserRepository>();
