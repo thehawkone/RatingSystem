@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Rating.Application.DTOs;
+using Rating.Application.DTOs.User;
 using Rating.Application.Services;
 
 namespace Rating.API.Controllers;

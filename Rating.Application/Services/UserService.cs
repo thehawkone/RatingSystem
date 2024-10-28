@@ -1,4 +1,5 @@
 ﻿using Rating.Application.DTOs;
+using Rating.Application.DTOs.User;
 using Rating.DataAccess;
 using Rating.Domain.Abstractions;
 using Rating.Domain.Models;

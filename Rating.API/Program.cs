@@ -20,6 +20,7 @@ builder.Services.AddScoped<IProductRepository, ProductRepository>();
 //Services
 builder.Services.AddScoped<TokenService>();
 builder.Services.AddScoped<UserService>();
+builder.Services.AddScoped<ProductService>();
 
 var jwtSettings = builder.Configuration.GetSection("JwtSettings");
 

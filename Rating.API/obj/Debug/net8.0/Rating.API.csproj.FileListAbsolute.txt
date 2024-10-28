@@ -125,3 +125,6 @@ C:\Users\Administrator\RiderProjects\RatingSystem\Rating.API\obj\Debug\net8.0\re
 C:\Users\Administrator\RiderProjects\RatingSystem\Rating.API\obj\Debug\net8.0\Rating.API.pdb
 C:\Users\Administrator\RiderProjects\RatingSystem\Rating.API\obj\Debug\net8.0\Rating.API.genruntimeconfig.cache
 C:\Users\Administrator\RiderProjects\RatingSystem\Rating.API\obj\Debug\net8.0\ref\Rating.API.dll
+C:\Users\Administrator\RiderProjects\RatingSystem\Rating.API\bin\Debug\net8.0\Rating.API.staticwebassets.endpoints.json
+C:\Users\Administrator\RiderProjects\RatingSystem\Rating.API\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\Administrator\RiderProjects\RatingSystem\Rating.API\obj\Debug\net8.0\staticwebassets\msbuild.Rating.API.Microsoft.AspNetCore.StaticWebAssetEndpoints.props

@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "u02Cx446VKg=",
+  "dgSpecHash": "b/ir12VfNns=",
   "success": true,
   "projectFilePath": "C:\\Users\\Administrator\\RiderProjects\\RatingSystem\\Rating.Domain\\Rating.Domain.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.4\\microsoft.netcore.app.ref.8.0.4.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.4\\microsoft.windowsdesktop.app.ref.8.0.4.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.4\\microsoft.aspnetcore.app.ref.8.0.4.nupkg.sha512"
+  ],
   "logs": []
 }

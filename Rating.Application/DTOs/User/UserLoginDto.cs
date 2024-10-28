@@ -1,4 +1,4 @@
-﻿namespace Rating.Application.DTOs;
+﻿namespace Rating.Application.DTOs.User;
 
 public class UserLoginDto
 {

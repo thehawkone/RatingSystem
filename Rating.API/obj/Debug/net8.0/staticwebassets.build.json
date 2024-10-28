@@ -1,11 +1,12 @@
 {
   "Version": 1,
-  "Hash": "hvtoC/rzhsgJIuGSnUX/aQkPkasHYldXBdRTXDKTnO8=",
+  "Hash": "ujKDPUVi34SAy5fFVRogxJJXsAzcSi2gg4e5JbxxXfc=",
   "Source": "Rating.API",
   "BasePath": "_content/Rating.API",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": []
+  "Assets": [],
+  "Endpoints": []
 }

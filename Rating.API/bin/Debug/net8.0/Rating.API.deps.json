@@ -682,10 +682,7 @@
           "Swashbuckle.AspNetCore": "6.5.0"
         },
         "runtime": {
-          "Rating.Application.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "Rating.Application.dll": {}
         }
       },
       "Rating.DataAccess/1.0.0": {
@@ -695,18 +692,12 @@
           "Rating.Domain": "1.0.0"
         },
         "runtime": {
-          "Rating.DataAccess.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "Rating.DataAccess.dll": {}
         }
       },
       "Rating.Domain/1.0.0": {
         "runtime": {
-          "Rating.Domain.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "Rating.Domain.dll": {}
         }
       }
     }
