@@ -9,13 +9,13 @@ namespace Rating.API.Controllers;
 
 [ApiController]
 [Route("[controller]")]
-public class AuthController : ControllerBase
+public class AccountController : ControllerBase
 {
     private readonly UserService _userService;
     private readonly TokenService _tokenService;
     private readonly IUserRepository _userRepository;
 
-    public AuthController(UserService userService, TokenService tokenService, IUserRepository userRepository)
+    public AccountController(UserService userService, TokenService tokenService, IUserRepository userRepository)
     {
         _userService = userService;
         _tokenService = tokenService;
