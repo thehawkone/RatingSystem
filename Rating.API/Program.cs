@@ -24,15 +24,12 @@ builder.Services.AddScoped<ProductService>();
 
 var jwtSettings = builder.Configuration.GetSection("JwtSettings");
 
-builder.Services.AddAuthentication(options =>
-    {
+builder.Services.AddAuthentication(options => {
         options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
         options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
     })
-    .AddJwtBearer(options =>
-    {
-        options.TokenValidationParameters = new TokenValidationParameters
-        {
+    .AddJwtBearer(options => {
+        options.TokenValidationParameters = new TokenValidationParameters {
             ValidateIssuer = true,
             ValidateAudience = true,
             ValidateLifetime = true,
@@ -52,9 +49,6 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-app.MapGet("/security/getMessage",
-    () => "Hello World!").RequireAuthorization();
-    
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
@@ -69,7 +63,6 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 app.UseAuthentication();
 
-app.UseEndpoints(endpoints =>
-    endpoints.MapControllers());
+app.MapControllers();
 
 app.Run();

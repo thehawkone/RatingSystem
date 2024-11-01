@@ -2,6 +2,7 @@
 using Rating.Application.DTOs.User;
 using Rating.DataAccess;
 using Rating.Domain.Abstractions;
+using Rating.Domain.Enums;
 using Rating.Domain.Models;
 
 namespace Rating.Application.Services;
@@ -28,7 +29,8 @@ public class UserService
             UserId = Guid.NewGuid(),
             Name = userRegisterDto.Name,
             PasswordHash = passwordHash,
-            Email = userRegisterDto.Email
+            Email = userRegisterDto.Email,
+            Role = Role.User
         };
         
         await _userRepository.CreateUserAsync(user);
@@ -43,9 +45,11 @@ public class UserService
         if (!VerifyPassword(password, user.PasswordHash)) {
             throw new Exception("Пароль или логин неверный");
         }
+
+        var role = await _userRepository.GetRoleByName(name);
         
         await _ratingDbContext.SaveChangesAsync();
-        return _tokenService.GenerateToken(name);
+        return _tokenService.GenerateToken(name, role);
     }
 
     public async Task<bool> ChangePasswordAsync(Guid userId, string oldPassword, string newPassword)

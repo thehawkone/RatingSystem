@@ -2,6 +2,8 @@
 using Rating.Application.DTOs;
 using Rating.Application.DTOs.User;
 using Rating.Application.Services;
+using Rating.Domain.Abstractions;
+using Rating.Domain.Enums;
 
 namespace Rating.API.Controllers;
 
@@ -11,11 +13,13 @@ public class AuthController : ControllerBase
 {
     private readonly UserService _userService;
     private readonly TokenService _tokenService;
+    private readonly IUserRepository _userRepository;
 
-    public AuthController(UserService userService, TokenService tokenService)
+    public AuthController(UserService userService, TokenService tokenService, IUserRepository userRepository)
     {
         _userService = userService;
         _tokenService = tokenService;
+        _userRepository = userRepository;
     }
 
     [HttpPost("register")]
@@ -29,8 +33,9 @@ public class AuthController : ControllerBase
     public async Task<IActionResult> Login([FromBody] UserLoginDto userLoginDto)
     {
         var user = await _userService.LoginAsync(userLoginDto.Name, userLoginDto.Password);
+        var role = await _userRepository.GetRoleByName(userLoginDto.Name);
         
-        var token = _tokenService.GenerateToken(user);
+        var token = _tokenService.GenerateToken(user, role);
         return Ok($"Авторизация прошла успешно!\nВаш токен: {token}");
     }
 

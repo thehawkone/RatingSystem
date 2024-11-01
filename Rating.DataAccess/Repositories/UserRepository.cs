@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Rating.Domain.Abstractions;
+using Rating.Domain.Enums;
 using Rating.Domain.Models;
 
 namespace Rating.DataAccess.Repositories;
@@ -21,6 +22,16 @@ public class UserRepository : IUserRepository
     public async Task<User> GetUserByName(string name)
     {
         return await _context.Users.FirstOrDefaultAsync(u => u.Name == name);
+    }
+
+    public async Task<Role> GetRoleByName(string name)
+    {
+        var user = await _context.Users
+            .AsNoTracking()
+            .SingleOrDefaultAsync(u => u.Name == name);
+        
+        // Если пользователь найден, возвращаем его роль, иначе возвращаем роль по умолчанию
+        return user?.Role ?? Role.User; 
     }
 
     public async Task CreateUserAsync(User user)

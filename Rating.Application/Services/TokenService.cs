@@ -18,15 +18,15 @@ public class TokenService
         _configuration = configuration;
     }
 
-    public string GenerateToken(string username)
+    public string GenerateToken(string username, Role role)
     {
         var jwtSettings = _configuration.GetSection("JwtSettings");
-        var roles = new List<string> { "Admin", "User" };
 
         var claims = new List<Claim>
         {
             new Claim(JwtRegisteredClaimNames.Sub, username),
             new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
+            new Claim("Role", role.ToString())
         };
         
         var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSettings["Key"]!));
