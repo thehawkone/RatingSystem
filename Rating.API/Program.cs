@@ -22,6 +22,7 @@ builder.Services.AddScoped<TokenService>();
 builder.Services.AddScoped<UserService>();
 builder.Services.AddScoped<ProductService>();
 builder.Services.AddScoped<AdminService>();
+builder.Services.AddScoped<ReviewService>();
 
 var jwtSettings = builder.Configuration.GetSection("JwtSettings");
 

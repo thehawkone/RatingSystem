@@ -9,7 +9,7 @@ public class AdminService
     private readonly IUserRepository _userRepository;
     private readonly RatingDbContext _ratingDbContext;
 
-    public AdminService(IUserRepository userRepository, RatingDbContext ratingDbContext, TokenService tokenService)
+    public AdminService(IUserRepository userRepository, RatingDbContext ratingDbContext)
     {
         _userRepository = userRepository;
         _ratingDbContext = ratingDbContext;
