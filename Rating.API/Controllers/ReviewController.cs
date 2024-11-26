@@ -18,9 +18,16 @@ public class ReviewController : ControllerBase
     }
     
     [HttpPost("{productId}")]
-    public async Task<IActionResult> LeaveReview(Guid userId, [FromBody] ReviewDto reviewDto)
+    public async Task<IActionResult> LeaveReview(Guid userId, Guid productId, [FromBody] ReviewDto reviewDto)
     {
-        var review = await _reviewService.AddReviewAsync(userId, reviewDto);
+        var review = await _reviewService.AddReviewAsync(userId, productId, reviewDto);
         return Ok("Отзыв добавлен");
+    }
+    
+    [HttpDelete("delete-review")]
+    public async Task<IActionResult> DeleteReview(Guid reviewId)
+    {
+        await _reviewService.DeleteProductAsync(reviewId);
+        return Ok("Продукт успешно удалён");
     }
 }

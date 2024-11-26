@@ -18,14 +18,14 @@ public class ProductController : ControllerBase
     [HttpPost("add-product")]
     public async Task<IActionResult> AddProduct([FromBody] ProductCreateDto productCreateDto)
     {
-        var product = await _productService.CreateProductAsync(productCreateDto);
+        await _productService.CreateProductAsync(productCreateDto);
         return Ok("Продукт успешно создан");
     }
 
     [HttpPut("update-product")]
     public async Task<IActionResult> UpdateProduct([FromBody] ProductUpdateDto productUpdateDto)
     {
-        var product = await _productService.UpdateProductAsync(productUpdateDto);
+        await _productService.UpdateProductAsync(productUpdateDto);
         return Ok("Продукт успешно обновлён");
     }
 
