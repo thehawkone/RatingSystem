@@ -21,7 +21,7 @@ public class ReviewService
 
     public async Task<Review> AddReviewAsync(Guid userId, Guid productId, ReviewDto reviewDto)
     {
-        if (reviewDto.Rating < 0 || reviewDto.Rating > 5) {
+        if (reviewDto.Rating is < 0 or > 5) {
             throw new ArgumentException("Оценка не может быть меньше 0 и больше 5");
         }
 
@@ -41,13 +41,15 @@ public class ReviewService
         return review;
     }
 
-    public async Task<bool> UpdateProductRatingAsync(Guid productId)
+    public async Task UpdateProductRatingAsync(Guid productId)
     {
         var reviews = await _ratingDbContext.Reviews
             .Where(r => r.ProductId == productId)
             .ToListAsync();
         
-        var averageRating = reviews.Average(r => r.Rating);
+        var averageRating = reviews.Any() 
+            ? reviews.Average(r => r.Rating) 
+            : 0;
         
         var product = await _ratingDbContext.Products
             .FirstOrDefaultAsync(p => p.ProductId == productId);
@@ -58,10 +60,9 @@ public class ReviewService
         }
            
         await _ratingDbContext.SaveChangesAsync();
-        return true;
     }
     
-    public async Task<bool> DeleteProductAsync(Guid reviewId)
+    public async Task DeleteProductAsync(Guid reviewId)
     {
         var product = await _reviewRepository.GetReviewByIdAsync(reviewId);
         if (product == null) {
@@ -71,7 +72,5 @@ public class ReviewService
         await _reviewRepository.DeleteReviewAsync(reviewId);
         await UpdateProductRatingAsync(product.ProductId);
         await _ratingDbContext.SaveChangesAsync();
-
-        return true;
     }
 }

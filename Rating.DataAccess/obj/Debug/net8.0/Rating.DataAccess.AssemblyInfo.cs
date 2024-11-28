@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Rating.DataAccess")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+73d4cd0d5e3c9adcd5d3bc07866c4d8092737307")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+40a8ccc65223df934c916b3236526efa65fe7c20")]
 [assembly: System.Reflection.AssemblyProductAttribute("Rating.DataAccess")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Rating.DataAccess")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
