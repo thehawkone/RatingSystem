@@ -10,18 +10,16 @@ public class ReviewService
 {
     private readonly RatingDbContext _ratingDbContext;
     private readonly IReviewRepository _reviewRepository;
-    private readonly IProductRepository _productRepository;
 
-    public ReviewService(IReviewRepository reviewRepository, IProductRepository productRepository, RatingDbContext ratingDbContext)
+    public ReviewService(IReviewRepository reviewRepository, RatingDbContext ratingDbContext)
     {
         _reviewRepository = reviewRepository;
-        _productRepository = productRepository;
         _ratingDbContext = ratingDbContext;
     }
 
     public async Task<Review> AddReviewAsync(Guid userId, Guid productId, ReviewDto reviewDto)
     {
-        if (reviewDto.Rating is < 0 or > 5) {
+        if (reviewDto.Rating is < 1 or > 5) {
             throw new ArgumentException("Оценка не может быть меньше 0 и больше 5");
         }
 
@@ -62,7 +60,25 @@ public class ReviewService
         await _ratingDbContext.SaveChangesAsync();
     }
     
-    public async Task DeleteProductAsync(Guid reviewId)
+    public async Task UpdateReviewAsync(Guid reviewId, ReviewDto reviewDto)
+    {
+        var review = await _reviewRepository.GetReviewByIdAsync(reviewId);
+        if (review == null) {
+            throw new Exception("Неверный идентификатор продукта");
+        }
+        
+        review.Comment = reviewDto.Comment;
+        review.Rating  = reviewDto.Rating;
+        
+        if (reviewDto.Rating is < 1 or > 5) {
+            throw new ArgumentException("Оценка не может быть меньше 0 и больше 5");
+        }
+        
+        await _reviewRepository.UpdateReviewAsync(review);
+        await _ratingDbContext.SaveChangesAsync();
+    }
+    
+    public async Task DeleteReviewAsync(Guid reviewId)
     {
         var product = await _reviewRepository.GetReviewByIdAsync(reviewId);
         if (product == null) {

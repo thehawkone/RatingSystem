@@ -19,7 +19,7 @@ public class ProductService
         _ratingDbContext = ratingDbContext;
     }
 
-    public async Task<bool> CreateProductAsync(ProductCreateDto productCreateDto)
+    public async Task CreateProductAsync(ProductCreateDto productCreateDto)
     {
         var product = new Product
         {
@@ -32,11 +32,9 @@ public class ProductService
         
         await _productRepository.CreateProductAsync(product);
         await _ratingDbContext.SaveChangesAsync();
-
-        return true;
     }
 
-    public async Task<bool> UpdateProductAsync(ProductUpdateDto productUpdateDto)
+    public async Task UpdateProductAsync(ProductUpdateDto productUpdateDto)
     {
         var product = await _productRepository.GetProductByIdAsync(productUpdateDto.ProductId);
         if (product == null) {
@@ -49,11 +47,9 @@ public class ProductService
         
         await _productRepository.UpdateProductAsync(product);
         await _ratingDbContext.SaveChangesAsync();
-
-        return true;
     }
 
-    public async Task<bool> DeleteProductAsync(Guid productId)
+    public async Task DeleteProductAsync(Guid productId)
     {
         var product = await _productRepository.GetProductByIdAsync(productId);
         if (product == null) {
@@ -62,7 +58,5 @@ public class ProductService
 
         await _productRepository.DeleteProductAsync(productId);
         await _ratingDbContext.SaveChangesAsync();
-
-        return true;
     }
 }
