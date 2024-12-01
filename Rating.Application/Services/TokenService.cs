@@ -18,13 +18,13 @@ public class TokenService
         _configuration = configuration;
     }
 
-    public string GenerateToken(string username, Role role)
+    public string GenerateToken(Guid userId, Role role)
     {
         var jwtSettings = _configuration.GetSection("JwtSettings");
 
         var claims = new List<Claim>
         {
-            new Claim(JwtRegisteredClaimNames.Sub, username),
+            new Claim(JwtRegisteredClaimNames.Sub, userId.ToString()),
             new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
             new Claim("Role", role.ToString())
         };

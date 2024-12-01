@@ -19,7 +19,7 @@ public class ReviewController : ControllerBase
     [HttpPost("leave-review")]
     public async Task<IActionResult> LeaveReview(Guid userId, Guid productId, [FromBody] ReviewDto reviewDto)
     {
-        var review = await _reviewService.AddReviewAsync(userId, productId, reviewDto);
+        await _reviewService.AddReviewAsync(userId, productId, reviewDto);
         return Ok("Отзыв добавлен");
     }
 

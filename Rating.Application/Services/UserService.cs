@@ -47,12 +47,10 @@ public class UserService
         }
 
         var role = await _userRepository.GetRoleByName(name);
-        
-        await _ratingDbContext.SaveChangesAsync();
-        return _tokenService.GenerateToken(name, role);
+        return _tokenService.GenerateToken(user.UserId, role);
     }
 
-    public async Task<bool> ChangePasswordAsync(Guid userId, string oldPassword, string newPassword)
+    public async Task ChangePasswordAsync(Guid userId, string oldPassword, string newPassword)
     {
         var user = await _userRepository.GetUserByIdAsync(userId);
         if (user == null) {
@@ -72,11 +70,9 @@ public class UserService
         
         await _userRepository.UpdateUserAsync(user);
         await _ratingDbContext.SaveChangesAsync();
-
-        return true;
     }
 
-    public async Task<bool> DeleteAsync(Guid userId)
+    public async Task DeleteAsync(Guid userId)
     {
         var user = await _userRepository.GetUserByIdAsync(userId);
         if (user == null) {
@@ -85,8 +81,6 @@ public class UserService
 
         await _userRepository.DeleteUserAsync(userId);
         await _ratingDbContext.SaveChangesAsync();
-        
-        return true;
     }
 
     private string HashPassword(string password)

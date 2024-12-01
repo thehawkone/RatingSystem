@@ -25,18 +25,15 @@ public class AccountController : ControllerBase
     [HttpPost("register")]
     public async Task<IActionResult> Register([FromBody] UserRegisterDto userRegisterDto)
     {
-        var user = await _userService.RegisterAsync(userRegisterDto);
+        await _userService.RegisterAsync(userRegisterDto);
         return Ok("Пользователь успешно зарегистрирован");
     }
 
     [HttpPost("login")]
     public async Task<IActionResult> Login([FromBody] UserLoginDto userLoginDto)
     {
-        var user = await _userService.LoginAsync(userLoginDto.Name, userLoginDto.Password);
-        var role = await _userRepository.GetRoleByName(userLoginDto.Name);
-        
-        var token = _tokenService.GenerateToken(user, role);
-        return Ok($"Авторизация прошла успешно!\nВаш токен: {token}");
+        var token = await _userService.LoginAsync(userLoginDto.Name, userLoginDto.Password);
+        return Ok($"Авторизация прошла успешно!\n\nВаш токен: {token}");
     }
 
     [HttpPut("change-password")]
