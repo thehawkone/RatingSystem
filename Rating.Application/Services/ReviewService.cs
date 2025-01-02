@@ -68,8 +68,8 @@ public class ReviewService
         await UpdateProductRatingAsync(product.ProductId);
         await _ratingDbContext.SaveChangesAsync();
     }
-    
-    public async Task UpdateProductRatingAsync(Guid productId)
+
+    private async Task UpdateProductRatingAsync(Guid productId)
     {
         var reviews = await _ratingDbContext.Reviews
             .Where(r => r.ProductId == productId)
