@@ -23,7 +23,7 @@ public class ProductController : ControllerBase
     }
 
     [HttpPut("update-product")]
-    public async Task<IActionResult> UpdateProduct([FromBody] ProductUpdateDto productUpdateDto)
+    public async Task<IActionResult> UpdateProduct(Guid productId, [FromBody] ProductUpdateDto productUpdateDto)
     {
         await _productService.UpdateProductAsync(productUpdateDto);
         return Ok("Продукт успешно обновлён");

@@ -18,7 +18,7 @@ public class AdminController : ControllerBase
     {
         _adminService = adminService;
     }
-
+    
     [HttpPut("replace-role")]
     public async Task<IActionResult> ReplaceRole(Guid userId, Role role)
     {
